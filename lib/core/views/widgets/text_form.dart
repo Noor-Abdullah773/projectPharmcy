@@ -8,14 +8,12 @@ class AppTextForm extends StatelessWidget {
     this.label,
     this.icon,
     required this.obscure,
-    this.validation
   }) : super(key: key);
 
   final String? label, hint;
   final bool obscure;
   final Widget? icon;
   final TextEditingController? controller;
-  final String? Function(String?)? validation;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +22,6 @@ class AppTextForm extends StatelessWidget {
       child: TextFormField(
         obscureText: obscure,
         controller: controller,
-        validator: validation,
         textAlign: TextAlign.end,
         textDirection: TextDirection.rtl,
         decoration: InputDecoration(

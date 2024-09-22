@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy2/core/views/widgets/button.dart';
+import 'package:pharmacy/core/views/widgets/button.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

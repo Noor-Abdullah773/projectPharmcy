@@ -5,28 +5,46 @@ class AppGridList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
-        gridDelegate:
-            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
-        itemBuilder: (ctx, indexk) {
-          return Container(
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Color.fromARGB(255, 215, 229, 227)),
+    return Container(
+      height: 260, // Keep the height fixed
+      child: GridView.builder(
+        physics: NeverScrollableScrollPhysics(), // Disable scrolling
+        itemCount: 6,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisSpacing: 2,
+          mainAxisSpacing: 20,
+          crossAxisCount: 3,
+          childAspectRatio: 1,
+        ),
+        itemBuilder: (ctx, index) {
+          return SizedBox(
+            height: 108,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset(width: 200, height: 80, 'assets/images/dwa2.png'),
-                Expanded(
-                  child: ListTile(
-                    title: Text(textAlign: TextAlign.end, 'مسكن الام '),
-                    subtitle: Text(
-                        textAlign: TextAlign.end, 'دواء يستخدم لمرض السكري'),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/drugList');
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      image: DecorationImage(
+                        image: AssetImage('assets/images/drug.jpg'),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    height: 80,
+                    width: 100, // Can keep width or adjust as needed
                   ),
-                )
+                ),
+                const SizedBox(height: 8),
+                Text('دواء سكري'),
               ],
             ),
           );
-        });
+        },
+      ),
+    );
   }
 }

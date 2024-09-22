@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy2/core/views/widgets/button.dart';
-import 'package:pharmacy2/core/views/widgets/stack_widget.dart';
+import 'package:pharmacy/core/views/widgets/button.dart';
+import 'package:pharmacy/core/views/widgets/stack_widget.dart';
 
 class RegesterScreen extends StatefulWidget {
   const RegesterScreen({super.key});
