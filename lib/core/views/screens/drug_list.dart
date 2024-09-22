@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy/core/views/widgets/dotted_line.dart';
-import 'package:pharmacy/core/views/widgets/drog_chip.dart';
-import 'package:pharmacy/core/views/widgets/image_list.dart';
 
-import 'package:pharmacy/core/views/widgets/my_dropdown.dart';
+import '../widgets/dotted_line.dart';
+import '../widgets/image_list.dart';
+
 
 class DrugList extends StatelessWidget {
   const DrugList({super.key});
@@ -33,7 +32,7 @@ class DrugList extends StatelessWidget {
             margin: EdgeInsets.all(10),
             child: Column(
               children: [
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Column(

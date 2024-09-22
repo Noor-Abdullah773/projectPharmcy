@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy/core/views/widgets/drog_chip.dart';
-import 'package:pharmacy/core/views/widgets/grade_view.dart';
-import 'package:pharmacy/core/views/widgets/markiting.dart';
+
+import '../widgets/drog_chip.dart';
+import '../widgets/grade_view.dart';
+import '../widgets/markiting.dart';
+
 
 class Home extends StatelessWidget {
   Home({super.key});
