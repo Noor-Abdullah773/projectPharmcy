@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../models/user.dart';
 import '../widgets/button.dart';
 import '../widgets/stack_widget.dart';
 
@@ -40,6 +41,7 @@ class _RegesterScreenState extends State<RegesterScreen> {
                 ButtonRounded(
                     text: 'انشاء حساب ',
                     onTap: () {
+                      
                       Navigator.pushNamed(context, '/singup');
                     }),
               ],
