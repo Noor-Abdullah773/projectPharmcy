@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy/core/views/widgets/button.dart';
-import 'package:pharmacy/core/views/widgets/stack_widget.dart';
-import 'package:pharmacy/core/views/widgets/text_form.dart';
+import '../../constant/api_url.dart';
+import '../../models/user.dart';
+import '../../veiwModel/usrtVm.dart';
+import '../widgets/button.dart';
+import '../widgets/stack_widget.dart';
+import '../widgets/text_form.dart';
+
 
 class LoginScreen extends StatelessWidget {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
+   UserVm uvm=UserVm();
   LoginScreen({super.key});
 
   @override
@@ -55,7 +60,31 @@ class LoginScreen extends StatelessWidget {
                 ),
                 ButtonRounded(
                   onTap: () {
+                    
+                   User u=User(email: emailController.text,password:passController.text);
+                  print(u.password);
+                   print(u.email);
+                  
+                   uvm.login(u,ApiUrls.loginUrl).then((value) {
+                     Navigator.pop(context);
+                      if(value=="secssed")
+                     // print("ok");
                     Navigator.pushNamed(context, '/home');
+                     else
+                     {
+                      return showDialog(context: context, builder:(ctx){
+                        return AlertDialog(
+                          content:Container(child: Text(value.toString()),)
+                        );
+                      });
+                     }
+                   }
+                    );//thin
+                   showModalBottomSheet(context: context, builder:(ctx){
+                    return Container(
+                     child: Center(child: CircularProgressIndicator(),),
+                    );});
+        
                   },
                   text: 'تسجيل الدخول',
                 )

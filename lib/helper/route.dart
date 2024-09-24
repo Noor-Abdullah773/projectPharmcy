@@ -6,6 +6,8 @@ import 'package:pharmacy2/core/views/screens/regester.dart';
 import 'package:pharmacy2/core/views/screens/singup.dart';
 import 'package:pharmacy2/core/views/screens/splash_screen.dart';
 
+import '../core/views/screens/donate.dart';
+
 class RouteManager {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -23,6 +25,8 @@ class RouteManager {
 
       case '/donait':
         return MaterialPageRoute(builder: (ctx) => Donits());
+      case '/donate':
+        return MaterialPageRoute(builder: (ctx) => DonateScreen());
     }
   }
 }

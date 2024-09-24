@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pharmacy/core/views/widgets/button.dart';
-import 'package:pharmacy/core/views/widgets/stack_widget.dart';
+
+import '../../models/user.dart';
+import '../widgets/button.dart';
+import '../widgets/stack_widget.dart';
 
 class RegesterScreen extends StatefulWidget {
   const RegesterScreen({super.key});
@@ -39,6 +41,7 @@ class _RegesterScreenState extends State<RegesterScreen> {
                 ButtonRounded(
                     text: 'انشاء حساب ',
                     onTap: () {
+                      
                       Navigator.pushNamed(context, '/singup');
                     }),
               ],
