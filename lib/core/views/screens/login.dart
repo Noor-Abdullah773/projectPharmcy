@@ -62,8 +62,8 @@ class LoginScreen extends StatelessWidget {
                   onTap: () {
                     
                    User u=User(email: emailController.text,password:passController.text);
-                  /*print(u.password);
-                   print(u.email);*/
+                  print(u.password);
+                   print(u.email);
                   
                    uvm.login(u,ApiUrls.loginUrl).then((value) {
                      Navigator.pop(context);
