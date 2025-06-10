@@ -18,3 +18,5 @@ This project follows best practices in Flutter development and leverages the fol
 
 - Add and manage medicine donations
 - Upload medication details with expiration dates
+- View available medications
+- Local storage with SQLite for offline access
