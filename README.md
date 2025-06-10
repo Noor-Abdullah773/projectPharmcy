@@ -33,3 +33,15 @@ lib/
 ├── services/ # API services using Dio
 ├── database/ # SQLite helper classes
 └── main.dart
+
+
+## 🔌 Getting Started
+
+To run this project on your local machine:
+
+```bash
+git clone https://github.com/yourusername/jisr_al_seha.git
+cd jisr_al_seha
+flutter pub get
+flutter run
+
