@@ -19,18 +19,22 @@ This project follows best practices in Flutter development and leverages the fol
 - Add and manage medicine donations
 - Upload medication details with expiration dates
 - View available medications
-- Local storage with SQLite for offline access## 🏗️ Project Structure
+- Local storage with SQLite for offline access
+- User login/session saved using SharedPreferences
+- Modular and maintainable architecture with MVVM
+
+## 🏗️ Project Structure
+
 lib/
 ├── core/ # Shared utilities (e.g., network, constants)
 ├── data/ # Data sources (remote & local)
 ├── models/ # Data models
 ├── view/ # UI screens
-├── viewmodel/ # Business logic for each screen
+├── viewmodel/ # Business logic for each screen (MVVM)
 ├── services/ # API services using Dio
 ├── database/ # SQLite helper classes
-└── main.dart
-- User login/session saved using SharedPreferences
-- Modular and maintainable architecture with MVVM
+└── main.dart # Application entry point
+
 
 
 
