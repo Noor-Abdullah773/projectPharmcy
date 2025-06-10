@@ -27,7 +27,7 @@ This project follows best practices in Flutter development and leverages the fol
 lib/
 ├── core/ # Shared utilities (e.g., network, constants)
 ├── data/ # Data sources (remote & local)
-├── models/ # Data models
+├── models/ # Data models (Data)
 ├── view/ # UI screens
 ├── viewmodel/ # Business logic for each screen
 ├── services/ # API services using Dio
