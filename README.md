@@ -22,3 +22,5 @@ This project follows best practices in Flutter development and leverages the fol
 - Local storage with SQLite for offline access
 - User login/session saved using SharedPreferences
 - Modular and maintainable architecture with MVVM
+
+## 🏗️ Project Structure
