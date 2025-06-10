@@ -13,3 +13,8 @@ This project follows best practices in Flutter development and leverages the fol
 - ✅ **Singleton Pattern** for shared instances
 - ✅ **SQLite** for local persistent storage
 - ✅ **SharedPreferences** for lightweight key-value data storage
+
+## 🚀 Features
+
+- Add and manage medicine donations
+- Upload medication details with expiration dates
