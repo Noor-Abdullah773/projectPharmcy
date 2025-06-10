@@ -20,3 +20,5 @@ This project follows best practices in Flutter development and leverages the fol
 - Upload medication details with expiration dates
 - View available medications
 - Local storage with SQLite for offline access
+- User login/session saved using SharedPreferences
+- Modular and maintainable architecture with MVVM
